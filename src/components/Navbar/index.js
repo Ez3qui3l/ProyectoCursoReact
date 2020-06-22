@@ -4,11 +4,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import Poliza from '../Poliza/index'
 import Nav from 'react-bootstrap/Nav'
 import Secciones from '../Secciones/index'
-import { Button, NavLink, Container } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
+import {Link} from 'react-router-dom'
 
 
 
-const NavBar=(props)=>{
+
+const NavBar=()=>{
 
 
 
@@ -20,24 +22,39 @@ const NavBar=(props)=>{
     
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
+  
     <ul class="navbar-nav" >
-    <li class="nav-item active" >
-     
-        
-        <a class="nav-link" href="#Poliza">Pólizas</a>
-        
-      </li>
-      <li class="nav-item active .px-2">
-        <a class="nav-link" href="#recl">Reclamos</a>
-      </li>
+          <div>
+            <Link to="/poliza">
+          <li class="nav-item active" >
+          <Button edge="start"  color="inherit" aria-label="menu">Poliza</Button>
+           </li>
+          </Link>
+            </div>
+
+            <div>
+            <Link to="/reclamos">
+          <li class="nav-item active" >
+          <Button edge="start"  color="inherit" aria-label="menu">Reclamo</Button>
+           </li>
+          </Link>
+            </div>
+            <div>
+            <Link to="/seccionP">
+          <li class="nav-item active" >
+          <Button edge="start"  color="inherit" aria-label="menu">PolizaList</Button>
+           </li>
+          </Link>
+            </div>
+            <div>
+            <Link to="/reclamosseccion">
+          <li class="nav-item active" >
+          <Button edge="start"  color="inherit" aria-label="menu">ReclamoList</Button>
+           </li>
+          </Link>
+            </div>
    
-    <NavDropdown title="Secciones" id="basic-nav-dropdown">
-        <NavDropdown.Item    href="#action/3.1" variant="light" bg="light"><span class="material-icons align-middle">list</span>Sección Polizas</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.2" variant="light" bg="light"><span class="material-icons align-middle">list</span>Sección Reclamos</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.3" variant="light" bg="light"><span class="material-icons align-middle">list</span>Sección Cantidad</NavDropdown.Item>
-    </NavDropdown>
+    
     </ul>
   </div>
 </Navbar>

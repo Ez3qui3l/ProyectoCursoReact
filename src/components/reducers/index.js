@@ -27,7 +27,7 @@ const bank = (totalAmount=0, action) =>{
 const claimHistory=(listOfClaims =[], action)=>{
     switch(action.type){
         case "CREATE_CLAIM":
-            return [...listOfClaims, action.payload]
+            return [...listOfClaims, action.payload.name]
         default:
             return listOfClaims    
     }

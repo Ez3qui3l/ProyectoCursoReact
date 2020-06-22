@@ -5,6 +5,7 @@ import NavBar from '../Navbar/index'
 import '../App/Styles.css'
 import Poliza from '../Poliza/index'
 import Secciones from '../Secciones/index'
+import Routes from '../../routes/routes'
 
 const App =()=>{
 
@@ -14,11 +15,11 @@ const App =()=>{
     
     return(<Container>
          
-                    
-        <NavBar></NavBar>
-       <Poliza></Poliza>
+         <Routes/>    
+        
+       {/*<Poliza></Poliza>*/}
        <hr></hr>
-        <Secciones></Secciones>
+        
         <hr ></hr>
         <hr></hr>
         <hr></hr>

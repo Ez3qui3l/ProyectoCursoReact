@@ -7,7 +7,7 @@ import { departments } from '../reducers/index'
 
 
 
-const Secciones=(props)=>{
+const SeccioneReclamo=(props)=>{
 
 
         
@@ -17,7 +17,7 @@ const Secciones=(props)=>{
                     <Container>
                         <Row>
                         
-                            <Col>Nombre: {props.policies + " "}
+                            <Col>Reclamo: {props.claimHistory + " "}
                             
                      
                             </Col>
@@ -46,4 +46,4 @@ const Secciones=(props)=>{
         }
       }
     
-      export default connect(mapStateToProps, {departments})(Secciones)
+      export default connect(mapStateToProps, {departments})(SeccioneReclamo)

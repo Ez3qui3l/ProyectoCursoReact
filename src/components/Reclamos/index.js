@@ -2,13 +2,13 @@ import React from 'react'
 import Form from 'react-bootstrap/Form'
 import { Button, Col,Row } from 'react-bootstrap'
 import { connect } from 'react-redux'
-import { createPolicy } from '../../components/Action/index'
+import { claimPolicy } from '../../components/Action/index'
 import { departments } from '../reducers/index'
 
 
 
 
-const Poliza=(props)=>{
+const Reclamos=(props)=>{
   
 
   //const amountRef = React.createRef()
@@ -37,21 +37,15 @@ const Poliza=(props)=>{
   const handleUser=(e)=>{
     e.preventDefault()
     
-    props.policies.name =e.target.value
-    console.log(props.policies.name)
+    props.claimHistory.name =e.target.value
+    console.log(props.claimHistory.name)
     
   };
-  const handleAmount=(e)=>{
-    e.preventDefault()
-    
-    props.bank.amount = e.target.value
-    console.log(props.bank.amount)
-  };
+ 
   const handleSubmit=(e)=>{
     e.preventDefault()
     
-    props.createPolicy(props.policies.name)
-    props.createPolicy(props.bank.amount)
+    props.claimPolicy(props.claimHistory.name)
 
   };
   
@@ -66,22 +60,14 @@ return(
         
     <Form>
   <Form.Group controlId="formBasicEmail">
-    <Form.Label>Poliza  </Form.Label>
+    <Form.Label>Reclamo  </Form.Label>
     <Form.Control type="text" placeholder="Enter"  onChange={handleUser}/>
     <Form.Text className="text-muted"  >
-      Ingresa nombre del beneficiario
+      Ingrese concepto del reclamo
     </Form.Text>
   </Form.Group>
 
-  <Form.Group controlId="formBasicPassword">
-    
-    <Form.Label>Monto</Form.Label>
-    <Form.Control type="number" placeholder="Amount" onContextMenu= {handleAmount} />
-    
-    <div class="input-group-prepend">
-    <span class="input-group-text">.00</span>
-  </div>
-  </Form.Group>
+  
   <Button variant="primary" type="submit" onClick={handleSubmit}>Submit</Button>
 
   
@@ -98,10 +84,9 @@ const mapStateToProps=(state)=>{
   console.log(state)
   return{
     
-    policies: state.policies,
-    bank: state.bank
+    claimHistory : state.claimHistory
 
   }
 }
 
-export default connect(mapStateToProps, {createPolicy})(Poliza)
+export default connect(mapStateToProps, {claimPolicy})(Reclamos)
