@@ -1,10 +1,7 @@
 import React from 'react'
-import { combineReducers, createStore } from 'redux'
-import { Container, Col, Row, FormLabel } from 'react-bootstrap'
-import NavBar from '../Navbar/index'
+import { Container,  FormLabel } from 'react-bootstrap'
 import '../App/Styles.css'
-import Poliza from '../Poliza/index'
-import Secciones from '../Secciones/index'
+
 import Routes from '../../routes/routes'
 
 const App =()=>{

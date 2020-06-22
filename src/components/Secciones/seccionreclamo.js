@@ -1,8 +1,6 @@
 import React from 'react'
-import Form from 'react-bootstrap/Form'
-import { Button, Col,Row, Container } from 'react-bootstrap'
+import { Table } from 'react-bootstrap'
 import { connect } from 'react-redux'
-import { createPolicy } from '../../components/Action/index'
 import { departments } from '../reducers/index'
 
 
@@ -11,27 +9,32 @@ const SeccioneReclamo=(props)=>{
 
 
         
-            {
             
-                return(
-                    <Container>
-                        <Row>
-                        
-                            <Col>Reclamo: {props.claimHistory + " "}
-                            
-                     
-                            </Col>
-                            <Col>
-                            Monto:{props.bank}
-                            </Col>
-                            
-                        </Row>
+            
+                return(<Table striped bordered hover variant="dark">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Reclamo:</th>
+                    <th>Monto</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>{props.claimHistory + " "}</td>
+                    <td>{props.bank}</td>
+                  </tr>
+                 
                   
-                    </Container>
+                  
+                </tbody>
+              </Table>
+                    
                  
                 )
             
-            }
+            
             
 }
 

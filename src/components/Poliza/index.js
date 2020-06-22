@@ -1,9 +1,8 @@
 import React from 'react'
 import Form from 'react-bootstrap/Form'
-import { Button, Col,Row } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { createPolicy } from '../../components/Action/index'
-import { departments } from '../reducers/index'
 
 
 

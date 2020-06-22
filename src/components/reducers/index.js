@@ -1,6 +1,5 @@
 
 import { combineReducers } from 'redux'
-import  { createStore } from 'redux'
 
 //Reducers
 const policies = (listPolicies = [], action) =>{
