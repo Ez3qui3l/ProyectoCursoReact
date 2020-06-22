@@ -17,10 +17,10 @@ const Poliza=(props)=>{
     console.log(props.policies.name)
     
   };
-  const handleAmount=(b)=>{
-    b.preventDefault()
+  const handleAmount=(e)=>{
+    e.preventDefault()
     
-    props.bank.amount = b.target.value
+    props.bank.amount = e.target.value
     console.log(props.bank.amount)
   };
   const handleSubmit=(e)=>{
@@ -28,7 +28,10 @@ const Poliza=(props)=>{
     
     props.createPolicy(props.policies.name)
     props.createPolicy(props.bank.amount)
+
   };
+  
+  
 
 
 
@@ -48,13 +51,13 @@ return(
   <Form.Group controlId="formBasicPassword">
     
     <Form.Label>Monto</Form.Label>
-    <Form.Control type="text" placeholder="Amount"  onChange={handleAmount}/>
+    <Form.Control type="number" placeholder="Amount" onClick={handleAmount}/>
     
     <div class="input-group-prepend">
     <span class="input-group-text">.00</span>
   </div>
   </Form.Group>
-  <Button variant="primary" type="submit" onClick={(handleSubmit)}>Submit</Button>
+  <Button variant="primary" type="submit" onClick={handleSubmit}>Submit</Button>
 
   
 </Form>

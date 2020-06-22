@@ -16,9 +16,15 @@ const App =()=>{
          
                     
         <NavBar></NavBar>
-        <Poliza></Poliza>
+       <Poliza></Poliza>
+       <hr></hr>
         <Secciones></Secciones>
-        
+        <hr ></hr>
+        <hr></hr>
+        <hr></hr>
+        <hr></hr>
+        <hr></hr>
+        <hr></hr>
         <FormLabel class="footer">
         
       

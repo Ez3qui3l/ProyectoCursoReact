@@ -14,12 +14,12 @@ const policies = (listPolicies = [], action) =>{
     }
 }
 
-const bank = (totalAmount=[], action) =>{
+const bank = (totalAmount=0, action) =>{
     switch(action.type){
         case "CREATE_POLICY":
-            return[...totalAmount, action.payload.amount]
+        return totalAmount + action.payload.amount
         case "CREATE_CLAIM":
-            return totalAmount.filter((amount)=>{return amount !==action.payload})
+            return totalAmount - action.payload.amount
         default :
         return totalAmount
     }

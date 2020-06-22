@@ -17,7 +17,7 @@ const Secciones=(props)=>{
                     <Container>
                         <Row>
                         
-                            <Col>Nombre: {props.policies}
+                            <Col>Nombre: {props.policies + " "}
                             
                      
                             </Col>
