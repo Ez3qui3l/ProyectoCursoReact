@@ -53,6 +53,13 @@ const NavBar=()=>{
            </li>
           </Link>
             </div>
+            <div>
+            <Link to="/montototal">
+          <li class="nav-item active" >
+          <Button edge="start"  color="inherit" aria-label="menu">MontoTotal</Button>
+           </li>
+          </Link>
+            </div>
    
     
     </ul>

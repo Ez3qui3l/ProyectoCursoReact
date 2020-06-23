@@ -8,7 +8,7 @@ import seccionpoliza from '../components/Pages/seccionpoliza'
 import reclamos from '../components/Pages/reclamos'
 import seccionreclamos from '../components/Pages/seccionreclamos'
 import principal from '../components/Pages/principal'
-
+import seccionmonto from '../components/Pages/seccionmonto'
 const browserHistory = createBrowserHistory()
 
 const Routes =()=>{
@@ -23,11 +23,10 @@ const Routes =()=>{
             <Route path="/seccionP" component={seccionpoliza}/>
             <Route path="/reclamos" component={reclamos}/>
             <Route path="/reclamosseccion" component={seccionreclamos}/>
+            <Route path="/montototal" component={seccionmonto}/>
 
-           {/* <Route path="/contact" component={Contact}/>
-            <Route path="/about" component={About}/>
-            <Route path="/NotFoundPage" component={NotFoundPage} />
-    */}
+
+       
             
                     
                     </Switch>
